@@ -11,6 +11,17 @@ root.render(
   </React.StrictMode>
 );
 
+document.addEventListener("mousemove", (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+
+  document.body.style.setProperty("--mouse-x", `${x}px`);
+  document.body.style.setProperty("--mouse-y", `${y}px`);
+});
+
+
+
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
